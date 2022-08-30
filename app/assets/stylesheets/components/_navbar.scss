@@ -10,3 +10,28 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-item {
+  text-align: right;
+}
+
+.input-group {
+  width: 35vw;
+}
+
+.nav-item {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+#left-div {
+  margin-right: auto;
+}
+
+.pointer {cursor: pointer;}

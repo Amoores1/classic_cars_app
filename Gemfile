@@ -77,3 +77,5 @@ group :test do
 end
 
 gem "devise"
+
+gem 'popper_js', '~> 2.11.5'
