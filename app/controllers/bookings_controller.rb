@@ -18,9 +18,11 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @car = Car.find(params[:car_id])
+    @booking.user = current_user
     @booking.car = @car
     @booking.save!
     redirect_to car_bookings_path(@booking.car)
+    # redirect_to car_path(car.id)
   end
 
   private
