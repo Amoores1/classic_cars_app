@@ -1,2 +1,7 @@
 <h1>Cars#show</h1>
 <p>Find me in app/views/cars/show.html.erb</p>
+
+<%= @car.manufacturer %>
+<%= @car.year %>
+
+<%=link_to "Book this car", new_car_booking_path(@car)%>
