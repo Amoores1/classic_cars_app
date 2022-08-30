@@ -1,4 +1,5 @@
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div class="container">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -6,12 +7,12 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <img src="https://cdn.sportscardigest.com/wp-content/uploads/20220313154349/10-Greatest-Japanese-Cars-02-Datsun-240Z.jpg" class="d-block w-100" alt="Datsun-240Z">
+       <img src=".. https://cdn.sportscardigest.com/wp-content/uploads/20220313154349/10-Greatest-Japanese-Cars-02-Datsun-240Z.jpg" class="d-block w-100" alt="Datsun-240Z"> %>
       <div class="carousel-caption d-none d-md-block">
         <h5>Feel alive</h5>
         <p>Do you want to drive through history?</p>
         <div class="btn-info">
-        <p class="btn-show"><%= link_to "show", show_cars_path(@cars) %></p>
+        <p class="btn-show"><%= link_to "show", cars_path(@cars.id) </p>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
@@ -19,7 +20,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Travel to the past</h5>
         <div class="btn-info">
-          <p class="btn-show"><%= link_to "show", show_cars_path(@cars) %></p>
+          <p class="btn-show"><%= link_to "show", cars_path(@cars.id) </p>
         </div>
         <p>Do you want to drive a legendary car?</p>
       </div>
@@ -29,7 +30,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Imagine that it is possible</h5>
         <div class="btn-info">
-          <p class="btn-show"><%= link_to "show", show_cars_path(@cars) %></p>
+          <p class="btn-show"><%= link_to "show", cars_path(@cars.id) </p>
         </div>
         <p>In classic cars your dreams are on wheels.</p>
       </div>
@@ -43,4 +44,5 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+  </div>
 </div>
