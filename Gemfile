@@ -79,3 +79,5 @@ end
 gem "devise"
 
 gem 'popper_js', '~> 2.11.5'
+
+gem 'faker', '~> 2.22'

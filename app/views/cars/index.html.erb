@@ -1,9 +1,20 @@
 <h1>Cars#index</h1>
 <p>Find me in app/views/cars/index.html.erb</p>
 
-<%@cars.each do |car| %>
-<ul>
-<li><%=car.model%></li>
-<%=link_to car.model, car_path(car.id) %>
-</ul>
-<%end %>
+<div class="container">
+  <div class="row">
+    <%@cars.each do |car| %>
+      <div class="car-card-container col">
+        <img class="car-image" src="https://source.unsplash.com/random/500×300/?car" alt="car">
+        <div class="sub-flex-text">
+          <div class="sub-flex-variables">
+            <h4><%=car.manufacturer + " " + car.model%></h4>
+            <h5><%=car.year%></h5>
+            <h5><%=car.category%></h5>
+          </div>
+          <%=link_to "See more", car_path(car.id) %>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
