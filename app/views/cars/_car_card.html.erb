@@ -1,0 +1,11 @@
+<div class="car-card-container">
+  <img class = "car-image" src="https://source.unsplash.com/random/500×300/?car" alt="car">
+  <div class="sub-flex-text">
+    <div class="sub-flex-variables">
+      <h4><%=car.manufacturer + " " + car.model%></h4>
+      <h5><%=car.year%></h5>
+      <h5><%=car.category%></h5>
+    </div>
+    <%=link_to "See more", car_path(car.id) %>
+  </div>
+</div>
