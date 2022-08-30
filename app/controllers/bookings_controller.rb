@@ -21,8 +21,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.car = @car
     @booking.save!
-    redirect_to car_bookings_path(@booking.car)
-    # redirect_to car_path(car.id)
+    # redirect_to car_bookings_path(@booking.car)
+    redirect_to bookings_path
   end
 
   private
