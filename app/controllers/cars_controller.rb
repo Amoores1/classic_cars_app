@@ -8,15 +8,29 @@ class CarsController < ApplicationController
   end
 
   def new
-    @cars = Car.new
+    @car = Car.new
   end
 
+  # def create
+  #   @car = Car.new(car_params)
+  #   if @car.save
+  #     redirect_to car_path
+  #   else
+  #     render :new
+  #   end
+  # end
+
   def create
-    @list = List.new(list_params)
-    if @list.save
-      redirect_to list_path(@list)
-    else
-      render :new
-    end
+    @car = Car.new(car_params)
+    # @car = Car.find(params[:car_id])
+    @car.user = current_user
+    @car.save!
+    redirect_to cars_path
+  end
+
+  private
+
+  def car_params
+    params.require(:car).permit(:manufacturer, :year, :model, :category, :day_price, :user_id)
   end
 end
