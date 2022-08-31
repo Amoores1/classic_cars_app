@@ -1,14 +1,19 @@
-<h1>Cars#show</h1>
-<p>Find me in app/views/cars/show.html.erb</p>
+<div class="p-3">
+  <h1><%=@car.manufacturer + " " + @car.model%></h1>
+        <% if @car.photo.key %>
+          <%= cl_image_tag @car.photo.key %>
+        <% else%>
+          <img src="https://source.unsplash.com/random/500×300/?car" alt="car">
+        <%end%>
+  <p>Make: <%= @car.manufacturer %></p>
+  <p>Model: <%= @car.model %></p>
+  <p>Year: <%= @car.year %></p>
+  <p>Category: <%= @car.category %></p>
+  <p>Daily Price: £<%= @car.day_price %></p>
 
-<p>Make: <%= @car.manufacturer %></p>
-<p>Model: <%= @car.model %></p>
-<p>Year: <%= @car.year %></p>
-<p>Category: <%= @car.category %></p>
-<p>Daily Price: £<%= @car.day_price %></p>
-
-<%=link_to "Book this car", new_car_booking_path(@car)%>
-<br>
-<br>
-<br>
-<%=link_to "Back to car list", cars_path%>
+  <%=link_to "Book this car", new_car_booking_path(@car)%>
+  <br>
+  <br>
+  <br>
+  <%=link_to "Back to car list", cars_path%>
+</div>
