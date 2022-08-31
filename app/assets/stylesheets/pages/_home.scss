@@ -2,10 +2,25 @@
 .img-carousel {
   object-fit: cover;
   width: max-content;
-  height:max-content
-}
-.carousel-item {
-  width: max-content;
   height: 600px;
 }
+.title-carousel {
+  text-align: center;
+  color: white;
+  box-shadow: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  letter-spacing: 3px;
+  size: 90px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
 
+.description-carousel{
+  text-align: center;
+  color: white;
+  box-shadow: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  size: 50px;
+}

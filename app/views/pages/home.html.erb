@@ -1,43 +1,44 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div id="container">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+      <%# bug here %>
+        <%= image_tag "home/BMW-328.jpeg", class: "img-carousel d-block w-100"%>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="title-carousel">Feel alive</h5>
+          <p class="description-carousel">Do you want to drive through history?</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <%= image_tag "home/Datsun-240Z.jpeg", class: "img-carousel d-block w-100"%>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="title-carousel">Travel to the past</h5>
+          <p class="description-carousel">>Do you want to drive a legendary car?</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "home/Ferrari-250-GTO.jpeg", class: "img-carousel d-block w-100"%>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="title-carousel">Imagine that it is possible</h5>
+          <p class="description-carousel">>In classic cars your dreams are on wheels.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-    <%# bug here %>
-      <%= image_tag "home/BMW-328.jpeg", class: "img-carousel d-block w-100"%>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Feel alive</h5>
-        <p>Do you want to drive through history?</p>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <%= image_tag "home/Datsun-240Z.jpeg", class: "img-carousel d-block w-100"%>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Travel to the past</h5>
-        <p>Do you want to drive a legendary car?</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <%= image_tag "home/Ferrari-250-GTO.jpeg", class: "img-carousel d-block w-100"%>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Imagine that it is possible</h5>
-        <p>In classic cars your dreams are on wheels.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
 <%# en carousel %>
