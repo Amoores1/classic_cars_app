@@ -1,18 +1,18 @@
 <div class="car-card-container">
-        <% if car.photo.key %>
-          <%= cl_image_tag car.photo.key, class:"car-image" %>
-        <% else%>
-          <img class="car-image" src="https://source.unsplash.com/random/500×300/?car" alt="car">
-        <%end%>
-        <div class="sub-flex-text">
-          <div class="sub-flex-left">
-            <h5><%=car.manufacturer + " " + car.model%></h5>
-            <h6><%=car.year%></h6>
-            <h6><%=car.category%></h6>
-          </div>
-          <div class="sub-flex-right">
-            <h6>£<%=car.day_price%> per day</h6>
-            <%=link_to "Read more", car_path(car.id), class: "sub-flex-link" %>
-          </div>
-        </div>
-      </div>
+  <% if car.photo.key %>
+    <%= cl_image_tag car.photo.key, class:"car-image" %>
+  <% else%>
+    <img class="car-image" src="https://source.unsplash.com/random/500×300/?car" alt="car">
+  <%end%>
+  <div class="sub-flex-text">
+    <div class="sub-flex-left">
+      <h5><%=car.manufacturer + " " + car.model%></h5>
+      <h6><%=car.year%></h6>
+      <h6><%=car.category%></h6>
+    </div>
+    <div class="sub-flex-right">
+      <h6>£<%=car.day_price%> per day</h6>
+      <%=link_to "Read more", car_path(car.id), class: "sub-flex-link" %>
+    </div>
+  </div>
+</div>
