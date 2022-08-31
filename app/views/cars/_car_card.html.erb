@@ -1,5 +1,7 @@
 <div class="car-card-container">
-        <img class="car-image" src="https://source.unsplash.com/random/500×300/?car" alt="car">
+        <% if car.photo.key %>
+          <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
+        <%end%>
         <div class="sub-flex-text">
           <div class="sub-flex-left">
             <h5><%=car.manufacturer + " " + car.model%></h5>
