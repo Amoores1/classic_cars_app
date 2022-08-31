@@ -10,30 +10,5 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/car_card"
 
-
-.car-card-container {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  margin: 5px;
-  width: 500px;
-  background-color: white;
-  border: solid rgb(233, 233, 233) 1px;
-  border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.sub-flex-text {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.sub-flex-variables {
-  display: flex;
-  flex-direction: column;
-}
-
-.car-image {
-  width: 30vw;
-}
