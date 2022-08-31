@@ -1,13 +1,46 @@
 .car-card-container {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .sub-flex-text {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  padding-top: 10px;
 }
 
-.sub-flex-variables {
+.sub-flex-left {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.sub-flex-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: right;
+}
+
+.car-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
