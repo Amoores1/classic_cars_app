@@ -1,6 +1,14 @@
 class CarsController < ApplicationController
   def index
-    @cars = Car.all
+    if params[:query].present?
+      @cars = Car.search_by_manufacturer_and_model(params[:query])
+      if @cars.empty?
+        flash.alert = "No cars found matching this search.\nHere are some others."
+        @cars = Car.all
+      end
+    else
+      @cars = Car.all
+    end
   end
 
   def show
