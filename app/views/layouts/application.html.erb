@@ -8,12 +8,15 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%# for bookings_index %>
+    <script src="//use.typekit.net/xyl8bgh.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
 
   <body>
   <br>
   <br>
-  <br>  
+  <br>
     <%= render partial: '/layouts/navbar' %>
     <%= yield %>
   </body>
