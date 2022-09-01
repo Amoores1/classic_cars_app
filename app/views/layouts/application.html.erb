@@ -14,6 +14,7 @@
   <div class="d-flex flex-column min-vh-100">
     <%= render partial: '/layouts/navbar' %>
     <article class="flex-grow-1">
+    <%= render partial: '/shared/flashes' %>
     <%= yield %>
     </article>
     <%= render partial: '/layouts/footer' %>
