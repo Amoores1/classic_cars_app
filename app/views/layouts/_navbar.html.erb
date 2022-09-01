@@ -9,10 +9,15 @@
     </div>
 
     <div class="nav-item">
-      <div class="input-group">
-        <input type="search" id="search-bar" class="form-control rounded" placeholder="Audi Quattro, Jaguar E-Type, Aston Martin DB5" aria-label="Search" aria-describedby="search-addon" />
-        <%= link_to '<button type="button" class="btn btn-outline-primary" id="button-search">Find a car</button>'.html_safe, cars_path %>
-      </div>
+      <%= form_with url: cars_path, method: :get, class: "rounded d-flex input-group" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          id: "search-bar",
+          placeholder: "Audi Quattro, Jaguar E-Type, Aston Martin DB5"
+        %>
+        <%= submit_tag "Find a car", class: "btn btn-outline-primary", id:"button-search" %>
+        <% end %>
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
