@@ -11,9 +11,12 @@
   </head>
 
   <body>
+  <div class="d-flex flex-column min-vh-100">
     <%= render partial: '/layouts/navbar' %>
+    <article class="flex-grow-1">
     <%= yield %>
+    </article>
+    <%= render partial: '/layouts/footer' %>
+  </div>
   </body>
 </html>
-
-<%= render partial: '/layouts/footer' %>
