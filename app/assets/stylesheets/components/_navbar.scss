@@ -21,7 +21,7 @@
 }
 
 .input-group {
-  width: 35vw;
+  width: 40vw;
 }
 
 .nav-item {
@@ -33,5 +33,33 @@
 #left-div {
   margin-right: auto;
 }
+#right-div {
+  margin-left: auto;
+}
 
 .pointer {cursor: pointer;}
+
+.logo-font {
+  font-family: 'Aboreto', cursive;
+  margin-left: 10px;
+}
+
+#search-bar:focus {
+  box-shadow: none;
+  border-color: black;
+}
+
+#search-bar {
+  border-radius: 3px 0 0 3px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+#button-search {
+  border-radius: 0 3px 3px 0;
+}
+
+fixed-nav-bar { position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 50px; background-color: #00a087; }
