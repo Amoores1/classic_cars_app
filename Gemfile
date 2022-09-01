@@ -84,4 +84,3 @@ gem 'faker', '~> 2.22'
 
 # Cloudinary image hosting - security gem
 gem "cloudinary"
-gem "dotenv-rails", groups: [:development, :test]
