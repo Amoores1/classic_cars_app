@@ -5,14 +5,14 @@
   height: 600px;
 }
 .title-carousel {
-  text-align: center;
+  text-align:center;
   color: white;
-  box-shadow: 5px;
   margin-bottom: 20px;
-  padding-bottom: 50px;
-  letter-spacing: 3px;
-  size: 90px;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+  padding-bottom: 300px;
+  letter-spacing: 10px;
+  word-spacing: 16px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8),
+  2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .description-carousel{
@@ -21,6 +21,6 @@
   box-shadow: 5px;
   margin-bottom: 20px;
   padding-bottom: 50px;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-  size: 50px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8),
+  2px 2px 2px rgba(0, 0, 0, 0.4);
 }
