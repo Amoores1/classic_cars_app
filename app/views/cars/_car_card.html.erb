@@ -2,7 +2,7 @@
   <% if car.photo.key %>
     <%= cl_image_tag car.photo.key, class:"car-image" %>
   <% else%>
-    <img class="car-image" src="https://source.unsplash.com/random/500×300/?car" alt="car">
+    <img class="car-image" src="https://api.unsplash.com/search/photos/?query=<%=car.manufacturer + " " + car.model%>" alt="car">
   <%end%>
   <div class="sub-flex-text">
     <div class="sub-flex-left">
