@@ -1,22 +1,27 @@
-<div class="card-trip">
-  <h1><%=@car.manufacturer + " " + @car.model%></h1>
-        <% if @car.photo.key %>
-          <%= cl_image_tag @car.photo.key %>
-        <% else%>
-          <img src="https://source.unsplash.com/random/500×300/?car" alt="car" width="600 px">
-        <%end%>
+<div class="arrow-box">
+  <i class="fa-solid fa-arrow-left"></i>
+  <%=link_to "Back to car list", cars_path%>
+</div>
+<div id="car-page-all">
+  <div class="card-trip">
+    <% if @car.photo.key %>
+      <%= cl_image_tag @car.photo.key %>
+    <% else%>
+      <img src="https://source.unsplash.com/random/500×300/?car" alt="car" width="600 px">
+    <%end%>
+  </div>
   <div class="card-trip-infos">
-    <div>
-      <p>Make: <%= @car.manufacturer.upcase%></p>
-      <p>Model: <%= @car.model %></p>
-      <p>Year: <%= @car.year %></p>
-      <p>Category: <%= @car.category %></p>
-      <p>Daily Price: £<%= @car.day_price %></p>
-    </div>
-    <h2 class="card-trip-pricing"><%= @car.day_price %></h2>
+    <p>Make: <%= @car.manufacturer.upcase%></p>
+    <p>Model: <%= @car.model %></p>
+    <p>Year: <%= @car.year %></p>
+    <p>Category: <%= @car.category %></p>
+    <p>Daily Price: £<%= @car.day_price %></p>
+    <%=link_to "Book this car", new_car_booking_path(@car), class: "btn btn-primary" %>
+  </div>
+  <div>
+    <%= render partial: '/cars/user_card', locals: {car: @car}%>
   </div>
 </div>
-
 
   <%if current_user == @car.user%>
     <%=link_to "Edit this car", edit_car_path %>
@@ -34,8 +39,4 @@
       </ul>
       <%end %>
    <%end%>
-<%=link_to "Book this car", new_car_booking_path(@car), class: "btn btn-primary" %>
-  <br>
-  <br>
-  <br>
-  <%=link_to "Back to car list", cars_path%>
+
