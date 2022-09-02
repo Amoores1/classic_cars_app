@@ -1,0 +1,7 @@
+<div class="container p-3">
+  <div class="cars-grid">
+    <%@cars.each do |car| %>
+      <%= render partial: '/cars/car_card', locals: {car: car} %>
+    <%end%>
+  </div>
+</div>

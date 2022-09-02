@@ -31,3 +31,20 @@
       <%end %>
     </div>
   </div>
+
+
+<div class="p-3">
+  <h1>Here are your bookings</h1>
+
+
+  <%current_user.bookings.each do |booking| %>
+  <ul>
+  <li><%=booking.car.manufacturer%></li>
+  <li><%=booking.car.model%></li>
+  <li><%=booking.total_price%></li>
+  <li><%=booking.start_date%></li>
+  <li><%=booking.end_date%></li>
+  </ul>
+  <%end %>
+</div>
+
