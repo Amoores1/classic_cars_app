@@ -1,0 +1,13 @@
+<h2>This is the update page </h2>
+
+
+  <%= simple_form_for [@car] do |f| %>
+    <%= f.input :manufacturer %>
+    <%= f.input :year %>
+    <%= f.input :model %>
+    <%= f.input :category, collection: ["Hatchback", "Saloon", "Estate", "MPV", "SUV", "Coupe", "Sports car", "Convertible"] %>
+    <%= f.input :day_price, :label =>"Day Price (£)" %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Submit car", class: "btn btn-primary" %>
+  <% end %>
+</div>
