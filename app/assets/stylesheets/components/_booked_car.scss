@@ -50,6 +50,23 @@
 }
 
 .arrow-box {
-  padding: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
   font-size: 14px;
+}
+
+.buttons-container {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  // font-size: 14px;
+}
+
+.user-options {
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.edit-button {
+  margin-right: 10px;
 }
