@@ -6,12 +6,13 @@
       <img src="https://source.unsplash.com/random/500×300/?car" alt="car">
     <%end%>
   <p>Make: <%= @car.manufacturer %></p>
+
   <p>Model: <%= @car.model %></p>
   <p>Year: <%= @car.year %></p>
   <p>Category: <%= @car.category %></p>
   <p>Daily Price: £<%= @car.day_price %></p>
 
-  <%=link_to "Book this car", new_car_booking_path(@car)%>
+  <%=link_to "Book this car", new_car_booking_path(@car), class: "btn btn-primary" %>
   <br>
   <br>
   <br>
