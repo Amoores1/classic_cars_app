@@ -14,18 +14,23 @@
     <% end %>
   </div>
 
-  <p>Total days:
+
+<div class="d-none">
+  <p >Total days:
     <p id="days">  </p>
   </p>
+</div>
 
-  <p>Price per day:
-    £<span data-price-target="daily"><%= @car.day_price %></span>
-  </p>
-
-  <p> Total price:
+ <div class="alert alert-primary" role="alert">
+  <div class="h4">
+    <p >Price per day:
+      £<span data-price-target="daily"><%= @car.day_price %></span>
+    </p>
+    <p>Total price:
       £ <span id="totalprice"> 0</span>
-  </p>
-
+    </p>
+  </div>
+</div>
 
 
 </div>
