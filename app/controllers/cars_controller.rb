@@ -13,6 +13,7 @@ class CarsController < ApplicationController
 
   def show
     @car = Car.find(params[:id])
+    @bookings = Booking.where(car: @car)
   end
 
   def new

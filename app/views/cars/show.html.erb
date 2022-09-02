@@ -19,7 +19,15 @@
     <%=link_to "Book this car", new_car_booking_path(@car), class: "btn btn-primary" %>
   <%end%>
 
-
+   <%if current_user == @car.user%>
+     <%@bookings.each do |booking| %>
+      <ul>
+        <li><%=booking.total_price%></li>
+        <li><%=booking.start_date%></li>
+        <li><%=booking.end_date%></li>
+      </ul>
+      <%end %>
+   <%end%>
   <br>
   <br>
   <br>
