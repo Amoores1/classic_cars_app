@@ -1,7 +1,7 @@
-<h1> New booking</h2>
-
-<div class="m-3" data-controller="price">
-  <div>
+<div class="p-3">
+ <div style="min-height: calc(100vh - 100px - 56px)">
+  <div class="container">
+   <div class="form-row d-flex justify-content-center">
     <%= simple_form_for [@car, @booking] do |f| %>
     <div data-action="change->price#submitDate">
        <%= f.input :start_date, html5: true, input_html: {"data-price-target": "start"} %>
@@ -15,12 +15,6 @@
   </div>
 
 
-<div class="d-none">
-  <p >Total days:
-    <p id="days">  </p>
-  </p>
-</div>
-
  <div class="alert alert-primary" role="alert">
   <div class="h4">
     <p >Price per day:
@@ -28,23 +22,9 @@
     </p>
     <p>Total price:
       £ <span id="totalprice"> 0</span>
-    </p>
+  </p>
   </div>
 </div>
 
 
 </div>
-
-
-<%# <h1>
-Total price:
-
-  <%= :end_date - :start_date %>
-
-<%# </h1> %>
-
-<%# <h1> Testing
-<%=a = Date.parse("12/1/2010") %>
-<%# <%=b = Date.parse("12/21/2010") %>
-<%# <%=c = b.mjd - a.mjd %>
-<%# <h1>  %>

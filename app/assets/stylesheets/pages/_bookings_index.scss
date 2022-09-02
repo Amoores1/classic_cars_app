@@ -182,13 +182,14 @@ body {
 }
 #ernesto-container {
   max-width: 800px;
-  min-width: 640px;
+  // min-width: 640px;
   margin: 0 auto;
+  display: flex;
 }
 #ernesto-container:before,
 #ernesto-container:after {
   content: "";
-  display: block;
+  // display: block;
   clear: both;
 }
 #ernesto-container .column {
