@@ -1,19 +1,17 @@
 <h1> New booking</h2>
-
-<div class="m-3" data-controller="price">
-  <div>
-    <%= simple_form_for [@car, @booking] do |f| %>
-    <div data-action="change->price#submitDate">
-       <%= f.input :start_date, html5: true, input_html: {"data-price-target": "start"} %>
+  <div class="m-3" data-controller="price">
+    <div>
+      <%= simple_form_for [@car, @booking] do |f| %>
+      <div data-action="change->price#submitDate">
+        <%= f.input :start_date, html5: true, input_html: {"data-price-target": "start"} %>
+      </div>
+      <div data-action="change->price#submitEndDate">
+        <%= f.input  :end_date, html5: true, input_html: {data: {target: "end_date"}} %>
+      </div>
+        <%= f.input :total_price, html5: true, input_html: {"data-price-target": "money", class:"d-none"}, label:false%>
+        <%= f.submit "Submit booking", class: "btn btn-primary" %>
+      <% end %>
     </div>
-    <div data-action="change->price#submitEndDate">
-      <%= f.input  :end_date, html5: true, input_html: {data: {target: "end_date"}} %>
-    </div>
-      <%= f.input :total_price, html5: true, input_html: {"data-price-target": "money", class:"d-none"}, label:false%>
-      <%= f.submit "Submit booking", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-
 
 <div class="d-none">
   <p >Total days:
