@@ -1,6 +1,6 @@
  <div class="p-3">
-    <h1>Here are your bookings</h1>
-    <div class="box">
+    <h1 id="bookings_title">Your bookings</h1>
+    <div data-bs-spy="scroll" data-bs-target="post-module" class="box">
       <%@bookings.each do |booking| %>
         <div id="ernesto-container">
           <!-- booking card-->
@@ -20,7 +20,7 @@
                 <div class="category"><%=booking.car.model%></div>
                 <div class="info-card">
                   <h1 class="title">Your <%=booking.car.manufacturer%> is waiting for you</h1>
-                  <h2 class="sub_title">The time to enjoy the road with all five senses is getting closer.</h2>
+                  <p class="sub_title">Remember to have your valid driving licence as well as your ID card or passport. If your licence belongs to a country who are not part of the International Driving Permit Agreement click <a href="https://www.gov.uk/driving-abroad/international-driving-permit" target="_blank">here</a></p>
                   <p class="description">Remember to have your valid driving licence as well as your ID card or passport. If your licence belongs to a country who are not part of the International Driving Permit Agreement click <a href="https://www.gov.uk/driving-abroad/international-driving-permit" target="_blank">here</a>.</p>
                 </div>
                 <div class="post-meta"><span class="comments"><i class="fa fa-comments"></i><a href="#">39 comments</a></span></div>
@@ -31,6 +31,8 @@
       <%end %>
     </div>
   </div>
+
+
 <div class="p-3">
   <h1>Here are your bookings</h1>
 
@@ -45,3 +47,4 @@
   </ul>
   <%end %>
 </div>
+
