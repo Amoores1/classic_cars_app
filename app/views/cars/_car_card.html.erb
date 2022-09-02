@@ -1,9 +1,12 @@
 <div class="car-card-container">
+<%=link_to car_path(car.id), class: "sub-flex-link" do %>
   <% if car.photo.key %>
     <%= cl_image_tag car.photo.key, class:"car-image" %>
   <% else%>
     <img class="car-image" src="https://api.unsplash.com/search/photos/?query=<%=car.manufacturer + " " + car.model%>" alt="car">
   <%end%>
+
+<% end %>
   <div class="sub-flex-text">
     <div class="sub-flex-left">
       <h5><%=car.manufacturer + " " + car.model%></h5>
@@ -12,7 +15,7 @@
     </div>
     <div class="sub-flex-right">
       <h6>£<%=car.day_price%> per day</h6>
-      <%=link_to "Read more", car_path(car.id), class: "sub-flex-link" %>
+    <%=link_to "Read more", car_path(car.id), class: "sub-flex-link" %>
     </div>
   </div>
 </div>
