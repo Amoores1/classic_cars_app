@@ -1,10 +1,10 @@
 <div class="p-3">
   <h1><%=@car.manufacturer + " " + @car.model%></h1>
-        <% if @car.photo.key %>
-          <%= cl_image_tag @car.photo.key %>
-        <% else%>
-          <img src="https://source.unsplash.com/random/500×300/?car" alt="car">
-        <%end%>
+    <% if @car.photo.key %>
+      <%= cl_image_tag @car.photo.key %>
+    <% else%>
+      <img src="https://source.unsplash.com/random/500×300/?car" alt="car">
+    <%end%>
   <p>Make: <%= @car.manufacturer %></p>
   <p>Model: <%= @car.model %></p>
   <p>Year: <%= @car.year %></p>
