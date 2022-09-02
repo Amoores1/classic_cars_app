@@ -1,5 +1,9 @@
 <div class="user-card-container">
-  <img class="user-avatar" src=<%car.user.photo.key%>% alt="user photo">
+  <% if car.user.photo.valid? %>
+    <%= image_tag(car.user.photo, class: "user-avatar")%>
+  <% else%>
+    <img class="user-avatar" src="https://cdn-icons-png.flaticon.com/512/149/149452.png" alt="user-avatar">
+  <%end%>
   <h4 class="user-name"><%= car.user.name %></h4>
   <p class="user-intro">I really love cars, mmmmm cars. Fast ones, old ones, gotta love em.</p>
 </div>
