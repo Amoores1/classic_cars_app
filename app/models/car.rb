@@ -6,7 +6,6 @@ class Car < ApplicationRecord
   pg_search_scope :search_by_manufacturer_and_model,
     against: [ :manufacturer, :model, :category],
     using: {
-      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+      tsearch: { prefix: true }
   }
 end
-7

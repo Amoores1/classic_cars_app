@@ -6,30 +6,47 @@ Car.destroy_all
 User.destroy_all
 
 user1 = User.new(email: "wow121212@email.com", password: "password123123", name: "David")
+user1.photo.attach(io: URI.open("https://pendine.com/wp-content/uploads/2018/10/DSC_3633-edited-21-e1570454025238-1500x842.jpg"), filename: "david.jpg", content_type: "image/jpg")
 user1.save!
 puts "generated user"
+
 user2 = User.new(email: "wow12121@email.com", password: "password123123", name: "Aaron")
+user2.photo.attach(io: URI.open("https://pendine.com/wp-content/uploads/2018/10/DSC_3633-edited-21-e1570454025238-1500x842.jpg"), filename: "aaron.jpg", content_type: "image/jpg")
 user2.save!
 puts "generated user"
+
 user3 = User.new(email: "wow1212@email.com", password: "password123123", name: "Hashim")
+user3.photo.attach(io: URI.open("https://pendine.com/wp-content/uploads/2018/10/DSC_3633-edited-21-e1570454025238-1500x842.jpg"), filename: "hashim.jpg", content_type: "image/jpg")
 user3.save!
 puts "generated user"
+
 user4 = User.new(email: "wow121@email.com", password: "password123123", name: "Ernesto")
+user4.photo.attach(io: URI.open("https://pendine.com/wp-content/uploads/2018/10/DSC_3633-edited-21-e1570454025238-1500x842.jpg"), filename: "ernesto.jpg", content_type: "image/jpg")
 user4.save!
 puts "generated user"
+
 user5 = User.new(email: "wow12@email.com", password: "password123123", name: "Claudio")
+user5.photo.attach(io: URI.open("https://pendine.com/wp-content/uploads/2018/10/DSC_3633-edited-21-e1570454025238-1500x842.jpg"), filename: "claudio.jpg", content_type: "image/jpg")
 user5.save!
 puts "generated user"
+
 user6 = User.new(email: "wow1@email.com", password: "password123123", name: "John")
+user6.photo.attach(io: URI.open("https://randomuser.me/api/portraits/men/0.jpg"), filename: "john.jpg", content_type: "image/jpg")
 user6.save!
 puts "generated user"
+
 user7 = User.new(email: "wow21@email.com", password: "password123123", name: "Sarah")
+user7.photo.attach(io: URI.open("https://randomuser.me/api/portraits/women/23.jpg"), filename: "sarah.jpg", content_type: "image/jpg")
 user7.save!
 puts "generated user"
+
 user8 = User.new(email: "wow212@email.com", password: "password123123", name: "Jane")
+user8.photo.attach(io: URI.open("https://randomuser.me/api/portraits/women/44.jpg"), filename: "jane.jpg", content_type: "image/jpg")
 user8.save!
 puts "generated user"
+
 user9 = User.new(email: "wow2121@email.com", password: "password123123", name: "Dave")
+user9.photo.attach(io: URI.open("https://randomuser.me/api/portraits/men/4.jpg"), filename: "dave.jpg", content_type: "image/jpg")
 user9.save!
 puts "generated user"
 

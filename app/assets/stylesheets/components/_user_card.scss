@@ -1,0 +1,18 @@
+.user-card-container {
+  width: 300px;
+  padding: 10px;
+  border: solid black 1px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.user-avatar {
+  border: solid rgb(0, 0, 0) 2px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
