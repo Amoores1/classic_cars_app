@@ -16,17 +16,17 @@ user2.save!
 puts "generated user"
 
 user3 = User.new(email: "wow1212@email.com", password: "password123123", name: "Hashim")
-user3.photo.attach(io: URI.open("https://pendine.com/wp-content/uploads/2018/10/DSC_3633-edited-21-e1570454025238-1500x842.jpg"), filename: "hashim.jpg", content_type: "image/jpg")
+user3.photo.attach(io: URI.open("https://avatars.githubusercontent.com/u/109346636?v=4"), filename: "hashim.jpg", content_type: "image/jpg")
 user3.save!
 puts "generated user"
 
 user4 = User.new(email: "wow121@email.com", password: "password123123", name: "Ernesto")
-user4.photo.attach(io: URI.open("https://pendine.com/wp-content/uploads/2018/10/DSC_3633-edited-21-e1570454025238-1500x842.jpg"), filename: "ernesto.jpg", content_type: "image/jpg")
+user4.photo.attach(io: URI.open("https://avatars.githubusercontent.com/u/95420474?v=4"), filename: "ernesto.jpg", content_type: "image/jpg")
 user4.save!
 puts "generated user"
 
 user5 = User.new(email: "wow12@email.com", password: "password123123", name: "Claudio")
-user5.photo.attach(io: URI.open("https://pendine.com/wp-content/uploads/2018/10/DSC_3633-edited-21-e1570454025238-1500x842.jpg"), filename: "claudio.jpg", content_type: "image/jpg")
+user5.photo.attach(io: URI.open("https://avatars.githubusercontent.com/u/58989756?v=4"), filename: "claudio.jpg", content_type: "image/jpg")
 user5.save!
 puts "generated user"
 
