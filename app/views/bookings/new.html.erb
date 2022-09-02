@@ -1,9 +1,45 @@
 <h1> New booking</h2>
 
-<%= simple_form_for [@car, @booking] do |f| %>
-  <%= f.input :total_price %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
+<div class="m-3" data-controller="price">
+  <div>
+    <%= simple_form_for [@car, @booking] do |f| %>
+    <div data-action="change->price#submitDate">
+       <%= f.input :start_date, html5: true, input_html: {"data-price-target": "start"} %>
+    </div>
+    <div data-action="change->price#submitEndDate">
+      <%= f.input  :end_date, html5: true, input_html: {data: {target: "end_date"}} %>
+    </div>
+      <%= f.input :total_price, html5: true, input_html: {"data-price-target": "money", class:"d-none"}, label:false%>
+      <%= f.submit "Submit booking", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 
-  <%= f.submit "Submit booking", class: "btn btn-primary" %>
-<% end %>
+  <p>Total days:
+    <p id="days">  </p>
+  </p>
+
+  <p>Price per day:
+    £<span data-price-target="daily"><%= @car.day_price %></span>
+  </p>
+
+  <p> Total price:
+      £ <span id="totalprice"> 0</span>
+  </p>
+
+
+
+</div>
+
+
+<%# <h1>
+Total price:
+
+  <%= :end_date - :start_date %>
+
+<%# </h1> %>
+
+<%# <h1> Testing
+<%=a = Date.parse("12/1/2010") %>
+<%# <%=b = Date.parse("12/21/2010") %>
+<%# <%=c = b.mjd - a.mjd %>
+<%# <h1>  %>
