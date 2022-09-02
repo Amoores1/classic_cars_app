@@ -35,7 +35,7 @@
   <h1>Here are your bookings</h1>
 
 
-  <%@bookings.each do |booking| %>
+  <%current_user.bookings.each do |booking| %>
   <ul>
   <li><%=booking.car.manufacturer%></li>
   <li><%=booking.car.model%></li>

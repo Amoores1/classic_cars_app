@@ -11,7 +11,15 @@
   <p>Category: <%= @car.category %></p>
   <p>Daily Price: £<%= @car.day_price %></p>
 
-  <%=link_to "Book this car", new_car_booking_path(@car), class: "btn btn-primary" %>
+
+  <%if current_user == @car.user%>
+    <%=link_to "Edit this car", edit_car_path %>
+    <%= link_to "Remove your car listing", car_path(@car), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+  <%else%>
+    <%=link_to "Book this car", new_car_booking_path(@car), class: "btn btn-primary" %>
+  <%end%>
+
+
   <br>
   <br>
   <br>
