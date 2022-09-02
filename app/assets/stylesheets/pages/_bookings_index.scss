@@ -1,9 +1,30 @@
 .box {
   background-image: url(sunshine.jpg);
-  background-attachment: fixed;
-  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-
+#bookings_title {
+  font-family: 'Aboreto', cursive;
+  margin-top: 0px;
+  margin-bottom: 6px;
+  position: relative;
+  text-align: center;
+  lighting-color: rgb(235, 5, 5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8),
+  2px 2px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8),
+  2px 2px 2px rgba(0, 0, 0, 0.4);
+  letter-spacing: 4px;
+  word-spacing: 7px;
+}
+#bookings_title {
+  border-radius: 15px;
+  background-color: white;
+  opacity: 0.9;
+  box-shadow: 3px, 3px, 3px rgba(0, 0, 0, 0.7),
+  4px, 4px, 4px rgba(0, 0, 0, 0.4);
+  border-bottom: 3px;
+}
 .bookings {
   width: 100%;
   height: 100%;
@@ -20,7 +41,8 @@ body {
   position: relative;
   z-index: 1;
   display: block;
-  background: #FFFFFF;
+  background: rgb(82, 80, 80);
+  border-radius: 5px;
   min-width: 270px;
   height: 470px;
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
@@ -33,7 +55,7 @@ body {
   transition: all 0.3s linear 0s;
 }
 .img-card{
-  width:285px;
+  width:300px;
   height:220px;
 }
 .post-module:hover,
@@ -91,9 +113,11 @@ body {
 .post-module .post-content {
   position: absolute;
   bottom: 0;
-  background: #FFFFFF;
+  background: rgb(229, 228, 228);
   width: 100%;
   padding: 30px;
+  box-shadow: #000000;
+  border-bottom: #000000;
   -webkti-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -107,7 +131,7 @@ body {
   position: absolute;
   top: -34px;
   left: 0;
-  background: #cc8e67;
+  background: #e74c3c;
   padding: 10px 15px;
   color: #FFFFFF;
   font-size: 14px;
@@ -120,18 +144,23 @@ body {
   color: #333333;
   font-size: 26px;
   font-weight: 700;
+  lighting-color: white;
 }
 .post-module .post-content .sub_title {
   margin: 0;
   padding: 0 0 20px;
-  color: #cc8e67;
-  font-size: 20px;
+  color: #e74c3c;
+  font-size: 12px;
   font-weight: 400;
+}
+.post-module .sub_title :hover {
+  color: #131212;
+  font-size: 14px;
 }
 .post-module .post-content .description {
   display: none;
   color: #666666;
-  font-size: 14px;
+  font-size: 9px;
   line-height: 1.8em;
 }
 .post-module .post-content .post-meta {
@@ -168,6 +197,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: left;
+  opacity: 0.8;
 }
 #ernesto-container .column .demo-title {
   margin: 0 0 15px;
