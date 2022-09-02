@@ -1,3 +1,36 @@
+ <div class="p-3">
+    <h1>Here are your bookings</h1>
+    <div class="box">
+      <%@bookings.each do |booking| %>
+        <div class="container">
+          <!-- booking card-->
+          <div class="column">
+            <div class="post-module">
+              <div class="thumbnail">
+                <%# logo card %>
+                <div class="date">
+                  <div class="day"><%=booking.start_date%></div>
+                </div>
+                <div class="img-card">
+                  <img src="https://bcassetcdn.com/public/blog/wp-content/uploads/2019/07/18095020/1-classic-car.png"/>
+                </div>
+              </div>
+              <!--Content-->
+              <div class="post-content">
+                <div class="category"><%=booking.car.model%></div>
+                <div class="info-card">
+                  <h1 class="title">Your <%=booking.car.manufacturer%> is waiting for you</h1>
+                  <h2 class="sub_title">The time to enjoy the road with all five senses is getting closer.</h2>
+                  <p class="description">Remember to have your valid driving licence as well as your ID card or passport. If your licence belongs to a country who are not part of the International Driving Permit Agreement click <a href="https://www.gov.uk/driving-abroad/international-driving-permit" target="_blank">here</a>.</p>
+                </div>
+                <div class="post-meta"><span class="comments"><i class="fa fa-comments"></i><a href="#">39 comments</a></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%end %>
+    </div>
+  </div>
 <div class="p-3">
   <h1>Here are your bookings</h1>
 
