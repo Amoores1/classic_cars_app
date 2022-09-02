@@ -2,6 +2,8 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    # @car = Car.find(params[:id])
+    # @bookings = Booking.where(car: @car)
   end
 
   def update

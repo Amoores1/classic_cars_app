@@ -1,18 +1,19 @@
  <div class="p-3">
     <h1 id="bookings_title">Your bookings</h1>
     <div data-bs-spy="scroll" data-bs-target="post-module" class="box">
-      <%@bookings.each do |booking| %>
+      <%current_user.bookings.each do |booking| %>
         <div id="ernesto-container">
           <!-- booking card-->
           <div class="column">
             <div class="post-module">
               <div class="thumbnail">
                 <%# logo card %>
-                <div class="date">
-                  <div class="day"><%=booking.start_date%></div>
-                </div>
                 <div class="img-card">
-                  <img src="https://bcassetcdn.com/public/blog/wp-content/uploads/2019/07/18095020/1-classic-car.png"/>
+                    <% if booking.car.photo.key %>
+                      <%= cl_image_tag booking.car.photo.key %>
+                    <% else%>
+                      <img src="https://source.unsplash.com/random/500×300/?car" alt="car" width="600 px">
+                    <%end%>
                 </div>
               </div>
               <!--Content-->
@@ -20,10 +21,13 @@
                 <div class="category"><%=booking.car.model%></div>
                 <div class="info-card">
                   <h1 class="title">Your <%=booking.car.manufacturer%> is waiting for you</h1>
-                  <p class="sub_title">Remember to have your valid driving licence as well as your ID card or passport. If your licence belongs to a country who are not part of the International Driving Permit Agreement click <a href="https://www.gov.uk/driving-abroad/international-driving-permit" target="_blank">here</a></p>
-                  <p class="description">Remember to have your valid driving licence as well as your ID card or passport. If your licence belongs to a country who are not part of the International Driving Permit Agreement click <a href="https://www.gov.uk/driving-abroad/international-driving-permit" target="_blank">here</a>.</p>
+                  <p>You can pick up your car on <%=booking.start_date%> and return it on <%=booking.start_date%> </a></p>
+
                 </div>
-                <div class="post-meta"><span class="comments"><i class="fa fa-comments"></i><a href="#">39 comments</a></span></div>
+                <p> £<%=booking.total_price%></p>
+                <button class="btn btn-primary">Message <%= booking.car.user.name%></button>
+                <%# <p>Please contact <%= booking.car.user.email%>
+                <%# <div class="post-meta"><span class="comments"><i class="fa fa-comments"></i><a href="#">39 comments</a></span></div> %>
               </div>
             </div>
           </div>
@@ -31,20 +35,3 @@
       <%end %>
     </div>
   </div>
-
-
-<div class="p-3">
-  <h1>Here are your bookings</h1>
-
-
-  <%current_user.bookings.each do |booking| %>
-  <ul>
-  <li><%=booking.car.manufacturer%></li>
-  <li><%=booking.car.model%></li>
-  <li><%=booking.total_price%></li>
-  <li><%=booking.start_date%></li>
-  <li><%=booking.end_date%></li>
-  </ul>
-  <%end %>
-</div>
-
