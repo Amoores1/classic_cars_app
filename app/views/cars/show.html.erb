@@ -17,6 +17,23 @@
   </div>
 </div>
 
+
+  <%if current_user == @car.user%>
+    <%=link_to "Edit this car", edit_car_path %>
+    <%= link_to "Remove your car listing", car_path(@car), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+  <%else%>
+    <%=link_to "Book this car", new_car_booking_path(@car), class: "btn btn-primary" %>
+  <%end%>
+
+   <%if current_user == @car.user%>
+     <%@bookings.each do |booking| %>
+      <ul>
+        <li><%=booking.total_price%></li>
+        <li><%=booking.start_date%></li>
+        <li><%=booking.end_date%></li>
+      </ul>
+      <%end %>
+   <%end%>
 <%=link_to "Book this car", new_car_booking_path(@car), class: "btn btn-primary" %>
   <br>
   <br>
