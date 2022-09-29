@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Legend Cars is a web app which mimics airbnb's model but provides users with the ability to rent and lease classic cars.Legend Cars was a project for Le Wagon's Web Development bootcamp, and was made with three classmates from the course ([Hashim](https://github.com/HashimJanjua), [Claudio](https://github.com/claudiopaz90), and [Ernesto](https://github.com/ERN35T0) :raised_hands: :raised_hands: :raised_hands:). We built this app from the ground up in roughly one week using Ruby on Rails, PostgreSQL, JavaScript, HTML, SCSS.
+
+Check it out [here](https://classic-cars-app-amoores1.herokuapp.com/)!
